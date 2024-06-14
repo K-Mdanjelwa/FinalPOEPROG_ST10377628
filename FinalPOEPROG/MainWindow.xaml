@@ -1,0 +1,58 @@
+﻿<Window x:Class="FinalPOEPROG.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FinalPOEPROG"
+        mc:Ignorable="d"
+        Title="Menu " Height="450" Width="810" Background="Beige" ResizeMode="NoResize" >
+    <Grid>
+        <StackPanel>
+            <TextBlock Text="WELCOME TO THE RECIPE APP" Margin="250,0,100,10" FontSize="20"/>
+
+            <TextBlock Text="Add New Recipe-->" FontSize="20" Margin="0,0,0,10"/>
+            <Button Content="Add Recipe" Click="addRecipe_click" Margin="200,-35,450,10"/>
+
+            <TextBlock Text="Display Recipes-->"   FontSize="20" Margin="0,0,0,10"/>
+            <Button Content="Display recipe" Click="displayRecipe_click" Margin="200,-35,450,10"/>
+            <ListBox x:Name="recipeListBox" Margin="380,-65,0,10" Height="300"/>
+
+
+            <ComboBox x:Name="scaleComboBox" Margin="150,-450,500,10" Height="20" />
+
+            <TextBlock Text="Select Scale Factor:" FontSize="15" Margin="0,-250,670,240"/>
+            <RadioButton x:Name="scaleFactorHalfRadioButton" Content="0.5" GroupName="ScaleFactor" Margin="0,-230,735,200" Width="70" />
+            <RadioButton x:Name="scaleFactorTwoRadioButton" Content="2" GroupName="ScaleFactor" Margin="0,-200,725,200"  />
+            <RadioButton x:Name="scaleFactorThreeRadioButton" Content="3" GroupName="ScaleFactor" Margin="80,-245,680,200" />
+            <Button Content="Scale Recipe" Click="scaleButton_click" Margin="150,-400,500,10" Height="20"/>
+
+            <TextBlock Text="Filter Recipes:" FontSize="20" Margin="0,-190,650,200"/>
+
+            <TextBlock Text="Ingredient Name:" Margin="0,-200,680,200" FontSize="15"/>
+            <TextBox x:Name="ingredientNameFilterTextBox" Margin="130,-217,500,200"/>
+
+            <TextBlock Text="Food Group:" Margin="0,-195,0,5"/>
+            <ComboBox x:Name="foodGroupFilterComboBox" Margin="130,-195,500,200">
+                <ComboBoxItem Content="All" IsSelected="True"/>
+                <ComboBoxItem Content="Vegetables"/>
+                <ComboBoxItem Content="Fruits"/>
+                <ComboBoxItem Content="Grains"/>
+                <ComboBoxItem Content="Protein"/>
+                <ComboBoxItem Content="Dairy"/>
+            </ComboBox>
+
+
+            <TextBlock Text="Max Calories:" Margin="0,-190,720,300"/>
+            <TextBox x:Name="maxCaloriesFilterTextBox" Margin="130,-320,500,300"/>
+
+            <Button Content="Apply Filter" Click="applyFilter_click" Margin="130,-300,500,300"/>
+            <Button Content="Exit" Click="exitButton_click" Margin="130,-250,550,280" FontStyle="Oblique" FontSize="15" FontWeight="Bold" Background="red"/>
+
+
+
+
+
+        </StackPanel>
+    </Grid>
+
+</Window>

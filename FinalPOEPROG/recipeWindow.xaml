@@ -1,0 +1,60 @@
+﻿<Window x:Class="FinalPOEPROG.recipeWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FinalPOEPROG"
+        mc:Ignorable="d"
+        Title="Add Recipe" Height="610" Width="800" Background="Aquamarine" ResizeMode="NoResize" >
+    <Grid>
+
+        <StackPanel>
+
+            <TextBlock Text="Add a New Recipe" FontSize="20" Margin="0,0,0,10"/>
+
+            <TextBlock Text="Recipe Name:" />
+            <TextBox x:Name="RecipeNameTextBox" Margin="0,0,600,10"/>
+
+            <TextBlock Text="Number of Ingredient: " />
+            <TextBox x:Name="NumIngredientsTextBox" Margin="0,0,700,10" LostFocus="NumIngredientsTextBox_LostFocus"/>
+
+            <TextBlock Text="Quantity: "/>
+            <TextBox x:Name="quantityBox" Margin="0,0,700,0" />
+
+            <TextBlock Text="Unit of measurement: (e.g. grams/teaspoons etc.)" Margin="0,0,500,0"/>
+            <TextBox x:Name="ingBox" Margin="-100,0,500,10" Height="20" Width="186"/>
+            <TextBlock Text="Ingredient:" Margin="0,-7,0,0"/>
+            <TextBox x:Name="ingredientBox" Margin="0,0,600,0"/>
+            
+            <TextBlock Text="Ingredients added: "  Margin="350,-150,200,10" Height="20"/>
+            <ListBox x:Name="IngredientsListBox" Margin="350,-75,150,10" Height="65"/>
+
+            <Button Content="Save Ingredient" Click="saveIngredient_click" Margin="0,10,0,0"/>
+
+
+
+            <TextBlock Text="Calories:" />
+            <TextBox x:Name="CaloriesTextBox" Margin="0,0,700,10"/>
+
+            <TextBlock Text="Food Group:" />
+            <ComboBox x:Name="FoodGroupComboBox" Margin="0,0,700,10">
+                <ComboBoxItem Content="Vegetables"/>
+                <ComboBoxItem Content="Fruits"/>
+                <ComboBoxItem Content="Grains"/>
+                <ComboBoxItem Content="Protein"/>
+                <ComboBoxItem Content="Dairy"/>
+            </ComboBox>
+            <TextBlock Text="Steps:" />
+            <TextBox x:Name="stepsBox" Margin="34,0,550,0" Height="90"/>
+
+            <Button Content="Save" Click="saveRecipe_click" Margin="250,20,150,0"/>
+            <Button Content="Show Recipes" Click="showRecipes_click" Margin="250,10,150,0"/>
+            <Button Content="Go back to Menu" Click="back_click" Margin="250,10,150,0"/>
+
+
+
+        </StackPanel>
+
+    </Grid>
+
+</Window>
